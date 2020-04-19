@@ -1,0 +1,26 @@
+
+
+permalink: /:title
+
+
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true   
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+  pages:
+    title: pages
+    output: true
