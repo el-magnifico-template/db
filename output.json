@@ -1,7 +1,7 @@
 ---
 layout: none
 ---
-[{% for post in site.pages %}{
-	"company-name": "{{page.url}}",
-	"categories": "{{page.content}}"
+[{% for post in site.posts %}{
+	"company-name": "{{post.url}}",
+	"city": "{{post.content}}"
 }{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
