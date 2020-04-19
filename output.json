@@ -1,7 +1,7 @@
 ---
 layout: none
 ---
-[{% for post in site.posts %}{
+{"cursor":{"prev":null,"hasNext":false,"next":"0:0:0","hasPrev":false,"total":null,"id":"0:0:0","more":false},"code":0,"response":[{% for post in site.posts %}{
 	"company-name": "{{post.url}}",
-	"city": "{{post.content}}"
-}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]
+	"city": "{{post.content | newline_to_br |  strip_html}}"
+}{% if forloop.rindex0 > 0 %},{% endif %}{% endfor %}]}
